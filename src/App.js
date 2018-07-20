@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import './assets/styles/App.css'
+import './assets/styles/pikkanode.css'
+import './assets/styles/pikkanode_mp.css'
 import Home from './pages/Home'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
