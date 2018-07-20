@@ -16,7 +16,6 @@ class SignUp extends React.Component {
           <footer className='border-top card-body text-center py-2'>Have an account?<Link to='/signin'>Log In</Link></footer>
         </div>
       </div>
-
     )
   }
 }
