@@ -18,7 +18,7 @@ class FormSignUp extends React.Component {
   submitSignUpHandler = async (e) => {
     e.preventDefault()
     console.log(this.state)
-    const { email, password} = this.state
+    const { email, password } = this.state
     const dataBody = {
       email: email,
       password: password
