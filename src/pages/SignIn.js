@@ -13,7 +13,7 @@ class SignIn extends React.Component {
             <p className='mb-2'>Login to pikkanode</p>
           </header>
           <article className='card-body px-3'>
-            <FormSignIn />
+            <FormSignIn isAuth={this.props.isAuth} />
           </article>
           <footer className='card-body text-center py-2'>
           Don't have a Account?<Link to='/signup'>Sign Up</Link>
