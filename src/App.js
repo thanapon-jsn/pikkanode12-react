@@ -8,13 +8,24 @@ import NotFound from './pages/NotFound'
 import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
+  state = {
+   isAuth: false
+  }
+
+  updateIsAuth = (isAuth) => {
+    this.setState({
+      isAuth: isAuth
+    })
+  }
+
   render () {
+    console.log(this.state)
     return (
       <div>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/signup' component={SignUp} />
-          <Route path='/signin' component={SignIn} />
+          <Route path='/signin' render={() => (<SignIn isAuth={this.updateIsAuth} />)} />
           <Route component={NotFound} />
         </Switch>
       </div>
