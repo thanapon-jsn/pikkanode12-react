@@ -10,7 +10,7 @@ const NotFound = () => {
           <div className='my-5'>
             <div className='d-flex flex-column'>
               <h1 className='text-center card-title mr-5'>404 Page Not Found</h1>
-              <p className='card-text'><img className='float-right mr-5' src={pictureNotFound} width='40%' /></p>
+              <p className='card-text'><img className='float-right mr-5' src={pictureNotFound} width='40%' alt='img not found' /></p>
             </div>
             <div className='d-flex justify-content-center'>
               <Link to='/' className='btn btn-dark'>Back to home</Link>
