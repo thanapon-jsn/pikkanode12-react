@@ -1,12 +1,10 @@
 import React from 'react'
 import { fetchApi } from '../services/server'
-import { Redirect } from 'react-router-dom'
 
 class FormSignUp extends React.Component {
   state = {
     email: '',
     password: '',
-    redirect: false
   }
 
   inputChangeHandler = (e) => {
@@ -26,8 +24,8 @@ class FormSignUp extends React.Component {
     const response = await fetchApi('/auth/signup','POST', dataBody)
     console.log(response)
     if (response.status === 200) {
+      this.props.setSignUpSuccess(true)
       this.setState({
-        redirect: true,
         password: ''
       })
     } else {
@@ -38,10 +36,7 @@ class FormSignUp extends React.Component {
   }
 
   render () {
-    const { email, password , redirect} = this.state
-    if (redirect) {
-      return <Redirect to='/signup' />
-    }
+    const { email, password } = this.state
     return (
       <div>
         <form onSubmit={this.submitSignUpHandler}>
