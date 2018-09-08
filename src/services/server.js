@@ -1,5 +1,5 @@
 async function fetchApi (url, method, body) {
-  const baseUrl = 'http://guver.net/api/v1'
+  const baseUrl = 'http://127.0.0.1:8000/api/v1'
   const isObject = Object.prototype.toString.call(body) === '[object Object]'
   const opts = {
     method,
